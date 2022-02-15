@@ -4,7 +4,7 @@ const lemon = 90.2345;
 const maxPrice = Math.max(apple, cherry, lemon);
 const minPrice = Math.min(apple, cherry, lemon);
 const total = apple + cherry + lemon;
-const totalRound = Math.floor(total);
+const totalRound = Math.floor(apple)+Math.floor(cherry)+Math.floor(lemon);
 const roundToHundreds = Math.round(totalRound / 100) * 100
 const evenOdd = (totalRound % 2 == 0) ? true : false;
 const value = 500;
@@ -18,6 +18,7 @@ const profit = (cost - (total / 100 * discount)).toFixed(2);
 document.writeln(`<b>Максимальна ціна:</b> ${maxPrice} <br> 
 <b>Мінімальна ціна:</b> ${minPrice} <br> 
 <b>Вартість всіх товарів:</b> ${total} <br> 
+<b>Вартість всіх товарів(округлення товарів окремо):</b> ${totalRound} <br> 
 <b>Вартість всіх товарів округлена до сотень:</b> ${roundToHundreds} <br> 
 <b>Булеве значення парне чи непарне число:</b> ${evenOdd} <br> 
 <b>Сума решти:</b> ${rest} <br><b> Середнє значення цін:</b> ${average} <br> 
