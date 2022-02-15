@@ -14,14 +14,13 @@ const average = (total / arrProduct.length).toFixed(2);
 const discount = (Math.random() * 100).toFixed(0);
 const valueWithDiscount = (total / 100 * (100 - discount)).toFixed(2);
 const cost = total / 2;
-const profit = (cost - discount).toFixed(2);
-document.writeln(`
-Максимальна ціна: ${maxPrice} <br> 
-Мінімальна ціна: ${minPrice} <br> 
-Вартість всіх товарів: ${total} <br> 
-Вартість всіх товарів округлена до сотень: ${roundToHundreds} <br> 
-Булеве значення парне чи непарне число: ${evenOdd} <br> 
-Сума решти: ${rest} <br> Середнє значення цін: ${average} <br> 
-Сума до оплати зі знижкою  ${discount}%: ${valueWithDiscount} <br> 
-Чистий прибуток: ${profit}
-`);
+const profit = (cost - (total / 100 * discount)).toFixed(2);
+document.writeln(`<b>Максимальна ціна:</b> ${maxPrice} <br> 
+<b>Мінімальна ціна:</b> ${minPrice} <br> 
+<b>Вартість всіх товарів:</b> ${total} <br> 
+<b>Вартість всіх товарів округлена до сотень:</b> ${roundToHundreds} <br> 
+<b>Булеве значення парне чи непарне число:</b> ${evenOdd} <br> 
+<b>Сума решти:</b> ${rest} <br><b> Середнє значення цін:</b> ${average} <br> 
+<b>Сума до оплати зі знижкою  ${discount}%: </b>${valueWithDiscount} <br> 
+<b>Чистий прибуток:</b> ${profit}
+</b>`);
