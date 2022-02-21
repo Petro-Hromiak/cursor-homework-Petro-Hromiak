@@ -1,11 +1,11 @@
 let numberN = +prompt(`Введіть початкове значення`);
 let numberM = +prompt(`Введіть кінцеве значення`);
 
-while (!Number.isInteger(numberN)) {
+while (!Number.isInteger(numberN) || numberN == '') {
     numberN = +prompt(`Початкове значення не є числом або не є цілим числом, будь-ласка введіть ціле число`);
     console.log(numberN)
 }
-while (!Number.isInteger(numberM)) {
+while (!Number.isInteger(numberM) || numberM == '') {
     numberM = +prompt(`Кінцеве значення не є числом або не є цілим числом, будь-ласка введіть ціле число`);
     console.log(numberM)
 }
